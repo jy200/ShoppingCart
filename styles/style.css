@@ -1,0 +1,88 @@
+html {
+  background-color: rgb(54, 54, 54);
+}
+
+
+.topbar {
+  background-color: red;
+  color:rgb(255, 255, 255);
+  padding-left:10px;
+}
+
+.main {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* background-color: grey; */
+  /* background-image: var(--bs-gradient); */
+  height:100%;
+  background-color: rgb(54, 54, 54);
+}
+
+.sidebar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.grid-container {
+  width: 75%;
+  display: grid;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: 30% 30% 30%;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  gap: 30px;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  
+
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255);
+  text-align: center;
+}
+
+.purchase-name {
+  font-size: large;
+  padding: 0px;
+  /* overflow: auto; */
+  /* white-space: normal; */
+  /* margin:0px; */
+  /* max-width: 10px; */
+}
+
+.quantity-bar {
+  display: flex;
+  /* line-height: 50px; */
+  justify-content: center;
+}
+.quantity-text {
+  text-align: center;
+}
+.quantity-button {
+  /* display:inline; */
+  max-height: 20px;
+  margin: 2px 20px 0px 20px;
+  width: 20%;
+  line-height: 0px;
+  padding: 0px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  max-height: 120px;
+  max-width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  margin: 5px;
+}
