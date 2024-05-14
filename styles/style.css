@@ -71,23 +71,6 @@ html {
   font-weight: 500;
 }
 
-.quantity-bar {
-  display: flex;
-  /* line-height: 3.125rem; */
-  justify-content: center;
-}
-.quantity-text {
-  text-align: center;
-}
-.quantity-button {
-  /* display:inline; */
-  max-height: 1.25rem;
-  margin: .125rem 1.25rem 0rem 1.25rem;
-  width: 20%;
-  line-height: 0rem;
-  padding: 0rem;
-}
-
 img {
   max-height: 7.5rem;
   max-width: 7.5rem;
@@ -157,6 +140,6 @@ img {
 
 .item-quantity{
   border:.0625rem solid rgba(0,0,0,0.1);
-  width: 38.4px;
+  width: 50px;
   font-size: 16px;
 }
