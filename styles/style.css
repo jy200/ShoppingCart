@@ -1,82 +1,122 @@
-html {
-  background-color: rgb(54, 54, 54);
+body {
+  background-color: rgb(255, 255, 255);
+  margin:0;
+  font-family: sans-serif;
 }
 
 
 .topbar {
-  background-color: red;
-  color:rgb(255, 255, 255);
+  display:flex;
+  background-color: #3f51b5;
+  color:white;
   padding-left:1.75rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
 }
 .topbar-name{
-  font-weight: 10;
+  font-size: 25px;
+  margin: 10px 0;
 }
-
+.topbar button{
+  margin-right: 1.75rem;
+  height: 30px;
+  background-color: #b53f51;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  width: 70px;
+  cursor: pointer;
+}
 .main {
-  height:100%;
-  background-color: rgb(54, 54, 54);
+  width: 70%;
+  margin: auto;
+  padding-top: 100px;
+  height:auto;
 }
 
 .sidebar {
   position: absolute;
+  display:flex;
+  flex-direction: column;
+  opacity: 0;
   top: 0rem;
   right: 0rem;
-  width: 25%;
+  width: 0%;
   margin: 0;
   padding: 0;
   list-style: none;
   background-color: white;
-  height: 100%;
-  overflow: auto;
-  border: .0625rem solid rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
+  height:auto;
+  overflow-x: hidden;
+  border-left: .0625rem solid rgba(0, 0, 0, 0.8);
+  transition: all 0.1s;
+}
+.sidebar-show{
+  width:50%;
+  opacity:1;
 }
 .sidebar-title{
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1rem;
+  padding-top: 20px;
   padding-bottom:1.25rem ;
   border-bottom: .0625rem solid rgba(0,0,0,0.1);
 }
-
+.sidebar-close-btn{
+  position:absolute;
+  top: 1rem;
+  right: 1rem;
+  color:white;
+  background-color: black;
+  padding: 9px 15px;
+  border-radius: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
 .grid-container {
-  width: 75%;
+  margin:auto;
   display: grid;
-  /* grid-template-columns: auto auto auto; */
-  grid-template-columns: 30% 30% 31%;
+  width: 70%;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: .625rem;
-  gap: 1.875rem;
-  height:100%;
+  gap: 10px;
   background-color: rgba(0, 0, 0, 0.0);
-  margin: 1.25rem 1.25rem;
-
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255);
+  border: rgb(214, 214, 214) 1px solid;
+  border-radius: 8px;
   text-align: center;
   cursor: pointer;
 }
 
 .purchase-name {
-  font-size: normal;
+  font-size: 24px;
   padding: 0rem;
-  color:rgb(255, 0, 0);
+  color:rgb(0, 0, 0);
   font-weight: 500;
   margin: 0;
 }
 
 .purchase-price {
   margin-bottom: .3125rem;
-  font-weight: 500;
 }
 
+.grid-image{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
 img {
-  max-height: 7.5rem;
-  max-width: 7.5rem;
-  border: .125rem solid rgba(0, 0, 0, 0.2);
-  margin-top: .3125rem;
-  object-fit: cover;
+  max-height: 6.5rem;
+  max-width: 6.5rem;
+  object-fit: contain;
+  padding: 50px;
 }
 
 .item-image {
@@ -89,7 +129,6 @@ img {
 .item-remove{
   width:1.5rem;
   height:1.5rem;
-  /* padding:.3125rem; */
   object-fit: cover;
   cursor: pointer;
 }
@@ -133,11 +172,6 @@ img {
    color:rgb(255, 68, 0);
    font-weight: 500;
 }
-
-.item-price{
-  font-weight: 500;
-}
-
 .item-quantity{
   border:.0625rem solid rgba(0,0,0,0.1);
   width: 50px;
